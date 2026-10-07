@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="ja">
+<head>
+ <meta charset="utf-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+ <meta name="theme-color" content="#fff9ef">
+ <title>の を みつけよう</title>
+ <link rel="stylesheet" href="style.css">
+ <script src="script.js" defer></script>
+</head>
+<body>
+ <main class="app" id="game">
+  <header><h1><span>の</span> を みつけよう</h1><button id="sound" class="sound" aria-label="音声をオフにする" aria-pressed="true">🔊</button></header>
+  <p class="stage" id="stage-name"></p>
+  <div class="scene" role="img" id="scene" aria-label="乗り物がゴールまで進む道路">
+   <div class="sun"></div><div class="cloud"></div><div class="hill"></div><div class="hill second"></div><div class="road"></div>
+   <div class="flag" aria-hidden="true">🏁</div><div class="lane"><div id="vehicle" class="vehicle"></div></div>
+  </div>
+  <div class="progress" id="progress" role="progressbar" aria-label="このステージの正解数" aria-valuemin="0" aria-valuemax="5" aria-valuenow="0"><i></i><i></i><i></i><i></i><i></i></div>
+  <p class="hint" id="hint" aria-live="polite">の は どこかな？</p>
+  <div class="balloons" id="balloons" aria-label="風船のひらがなを選ぼう"></div>
+ </main>
+ <div class="correct-display" id="correct-display" hidden aria-hidden="true"><span>の</span><div>✦　✧　✦</div></div>
+ <div class="particles" id="particles" aria-hidden="true"></div>
+ <div class="overlay" id="clear" hidden role="dialog" aria-modal="true" aria-labelledby="clear-title">
+  <div class="clear-card"><div class="stars" aria-hidden="true">★ ★ ★</div><h2 id="clear-title">ステージクリア！</h2><div class="clear-vehicle" id="clear-vehicle" aria-hidden="true"></div><p id="clear-message"></p><button class="next" id="next">つぎへ →</button></div>
+ </div>
+</body>
+</html>
